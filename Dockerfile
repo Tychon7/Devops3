@@ -1,4 +1,4 @@
 FROM openjdk:17
-COPY ./target/classes/com /tmp/com
+COPY ./target/Devops-1.0-SNAPSHOT.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.napier.sem.App"]
+ENTRYPOINT ["java", "-jar", "Devops-1.0-SNAPSHOT.jar", "db:3306", "30000"]
